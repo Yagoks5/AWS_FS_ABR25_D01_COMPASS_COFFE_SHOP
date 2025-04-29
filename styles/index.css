@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 21px 93px;
+  padding: 0px 93px;
 }
 
 /* w-135px h-46px */
@@ -30,12 +30,14 @@ body {
   height: 46px;
   width: 135px;
   font-size: 35px;
+  padding-top: 21px;
 }
 
 .ul-links {
   list-style: none;
   display: flex;
   gap: 60px;
+  padding-top: 34px;
 }
 
 a {
@@ -43,7 +45,11 @@ a {
   color: white;
 }
 
-.order-button {
+.order-btn {
+  padding-top: 20px;
+}
+
+button {
   border-radius: 24px;
   background-color: #f9c06a;
   border: none;
@@ -53,7 +59,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.order-button:hover {
+button:hover {
   transform: scale(1.05);
 }
 
@@ -87,16 +93,6 @@ a {
   line-height: 1.6;
 }
 
-.secton_1_content button {
-  margin-top: 30px;
-  background-color: #ffd580;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
 #coffee {
   top: 212px;
   left: 93px;
@@ -106,8 +102,4 @@ a {
   font-size: 220px;
   color: #ffffff;
   font-family: "Clicker Script";
-}
-
-.order-button-2:hover {
-  transform: scale(1.05);
 }
