@@ -1,0 +1,229 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Espresso",
+            "type": "Hot Beverage",
+            "price": 2.50,
+            "short_description": "Strong, rich coffee shot made with 100% Arabica beans",
+            "is_new": false,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Arabica",
+                    "percentage": 100
+                },
+                {
+                    "ingredient": "Water",
+                    "percentage": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Cappuccino",
+            "type": "Hot Beverage",
+            "price": 3.20,
+            "short_description": "Espresso topped with steamed milk and frothy foam",
+            "is_new": false,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Arabica",
+                    "percentage": 60
+                },
+                {
+                    "ingredient": "Steamed Milk",
+                    "percentage": 40
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Blueberry Muffin",
+            "type": "Bakery",
+            "price": 2.80,
+            "imagem_url": "",
+            "short_description": "Soft muffin filled with fresh blueberries and a sugar crust",
+            "is_new": false
+        },
+        {
+            "id": 4,
+            "name": "Cold Brew Coconut",
+            "type": "Cold Beverage",
+            "price": 3.90,
+            "short_description": "Cold brewed coffee infused with coconut water",
+            "is_new": true,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Cold Brew",
+                    "percentage": 70
+                },
+                {
+                    "ingredient": "Coconut Water",
+                    "percentage": 30
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Ham & Cheese Croissant",
+            "type": "Savory Snack",
+            "price": 4.20,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "short_description": "Buttery croissant with ham and melted cheese inside",
+            "is_new": false
+        },
+        {
+            "id": 6,
+            "name": "Matcha Latte",
+            "type": "Hot Beverage",
+            "price": 3.75,
+            "short_description": "Creamy green tea latte made with ceremonial matcha",
+            "is_new": true,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Milk",
+                    "percentage": 65
+                },
+                {
+                    "ingredient": "Matcha",
+                    "percentage": 35
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Iced Caramel Macchiato",
+            "type": "Cold Beverage",
+            "price": 4.50,
+            "short_description": "Chilled espresso with milk and caramel drizzle",
+            "is_new": false,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Espresso",
+                    "percentage": 50
+                },
+                {
+                    "ingredient": "Caramel Milk",
+                    "percentage": 50
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Vegan Chocolate Brownie",
+            "type": "Bakery",
+            "price": 3.00,
+            "imagem_url": "",
+            "short_description": "Fudgy plant-based brownie with dark chocolate chips",
+            "is_new": false
+        },
+        {
+            "id": 9,
+            "name": "Turkey & Avocado Sandwich",
+            "type": "Savory Snack",
+            "price": 5.20,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "short_description": "Whole grain sandwich with turkey, avocado and greens",
+            "is_new": false
+        },
+        {
+            "id": 10,
+            "name": "Chai Latte",
+            "type": "Hot Beverage",
+            "price": 3.60,
+            "short_description": "Spiced tea with milk, infused with cinnamon and cardamom",
+            "is_new": false,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Milk",
+                    "percentage": 55
+                },
+                {
+                    "ingredient": "Spiced Tea",
+                    "percentage": 45
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Hazelnut Cold Foam Brew",
+            "type": "Cold Beverage",
+            "price": 4.10,
+            "short_description": "Cold brew with hazelnut syrup and silky cold foam",
+            "is_new": true,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Cold Brew",
+                    "percentage": 60
+                },
+                {
+                    "ingredient": "Hazelnut Foam",
+                    "percentage": 40
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Classic Donut",
+            "type": "Bakery",
+            "price": 1.80,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "short_description": "Glazed yeast donut, soft and sweet",
+            "is_new": false
+        },
+        {
+            "id": 13,
+            "name": "Fruit Parfait",
+            "type": "Snack",
+            "price": 3.90,
+            "short_description": "Layers of granola, yogurt, and fresh fruits",
+            "is_new": false
+        },
+        {
+            "id": 14,
+            "name": "Iced Hibiscus Tea",
+            "type": "Cold Beverage",
+            "price": 3.30,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "short_description": "Refreshing herbal tea with a tart berry flavor",
+            "is_new": false,
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Hibiscus Tea",
+                    "percentage": 70
+                },
+                {
+                    "ingredient": "Ice",
+                    "percentage": 30
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Pumpkin Spice Latte",
+            "type": "Hot Beverage",
+            "price": 4.60,
+            "short_description": "Espresso with steamed milk and pumpkin spice syrup",
+            "is_new": true,
+            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "ingredients_ratio": [
+                {
+                    "ingredient": "Milk",
+                    "percentage": 50
+                },
+                {
+                    "ingredient": "Pumpkin Espresso",
+                    "percentage": 50
+                }
+            ]
+        }
+    ]
+}

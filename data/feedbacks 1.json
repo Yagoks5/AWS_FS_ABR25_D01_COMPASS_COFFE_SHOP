@@ -1,0 +1,61 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "full_name": "Laura Mitchell",
+            "profession": "Graphic Designer",
+            "image_url": "https://randomuser.me/api/portraits/women/68.jpg",
+            "message": "Absolutely love the Cold Brew Coconut! So refreshing and smooth. Perfect for my design breaks."
+        },
+        {
+            "id": 2,
+            "full_name": "Carlos Eduardo Martins",
+            "profession": "Software Developer",
+            "image_url": "https://randomuser.me/api/portraits/men/75.jpg",
+            "message": "The Matcha Latte is a game changer. Smooth taste, just the right amount of energy for coding marathons."
+        },
+        {
+            "id": 3,
+            "full_name": "Aisha Khan",
+            "profession": "Journalist",
+            "image_url": "https://randomuser.me/api/portraits/women/44.jpg",
+            "message": "Love the cozy vibe and the Pumpkin Spice Latte! It brings back warm autumn memories even in spring."
+        },
+        {
+            "id": 4,
+            "full_name": "Tomás Ribeiro",
+            "profession": "Photographer",
+            "image_url": "https://randomuser.me/api/portraits/men/23.jpg",
+            "message": "Tried the Hazelnut Cold Foam Brew for the first time—super smooth and not too sweet. Great for editing sessions!"
+        },
+        {
+            "id": 5,
+            "full_name": "Nina Carter",
+            "profession": "Marketing Manager",
+            "image_url": "https://randomuser.me/api/portraits/women/11.jpg",
+            "message": "Their Vanilla Bean Frappuccino is my go-to every afternoon. Friendly staff and cozy chairs are a bonus."
+        },
+        {
+            "id": 6,
+            "full_name": "Ravi Desai",
+            "profession": "UI/UX Designer",
+            "image_url": "https://randomuser.me/api/portraits/men/42.jpg",
+            "message": "Chai Latte was well-balanced and not too spicy—plus, I could work on my laptop without distractions."
+        },
+        {
+            "id": 7,
+            "full_name": "Julia Nakamura",
+            "profession": "Architect",
+            "image_url": "https://randomuser.me/api/portraits/women/51.jpg",
+            "message": "The spinach & feta wrap and an espresso? The power combo for my lunch breaks. Highly recommend!"
+        },
+        {
+            "id": 8,
+            "full_name": "Noah Williams",
+            "profession": "Entrepreneur",
+            "image_url": "https://randomuser.me/api/portraits/men/36.jpg",
+            "message": "Great place to take meetings over coffee. The ambiance is just right, and the Caramel Macchiato is top-tier."
+        }
+    ]
+}
