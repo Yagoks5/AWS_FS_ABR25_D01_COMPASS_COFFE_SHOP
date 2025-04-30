@@ -116,7 +116,7 @@ button:hover {
   background-color: #fffefc;
   padding-left: 93px;
   padding-right: 93px;
-  width: 1400px;
+  /* width: 1400px; */
   padding-top: 82px;
 }
 
@@ -132,6 +132,10 @@ button:hover {
   height: 100%;
   object-fit: cover;
 }
+.discover-img img {
+  width: 500px;
+  height: 484px;
+}
 
 .discover-section h3 {
   color: #603809;
@@ -145,4 +149,86 @@ button:hover {
   font-size: 18px;
   line-height: 1.8;
   padding-bottom: 28px;
+}
+
+.coffee-types {
+  padding-top: 82px;
+  padding-left: 93px;
+  text-align: center;
+  background-color: #fffefc;
+  color: #603809;
+}
+
+.coffee-types-title {
+  font-size: 54px;
+  font-weight: bold;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.coffee-types-description {
+  color: #603809;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.coffee-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.card {
+  width: 280px;
+  height: 388px;
+}
+
+.coffee-card {
+  position: relative;
+  background-color: #fff9f1;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f9c06a6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 364px;
+}
+
+.coffee-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 14px;
+  height: 222px;
+}
+
+.coffee-card h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.coffee-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #1e1e1e;
+  font-weight: 400;
+}
+
+.coffee-card p {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #603809;
+  font-weight: 700;
+}
+
+.coffee-card button {
+  font-weight: 700;
+  margin-bottom: -24px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
