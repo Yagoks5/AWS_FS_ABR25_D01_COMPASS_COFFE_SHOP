@@ -6,7 +6,7 @@
 }
 
 .pag1 {
-  background-image: url("../assets/coffee_image.png");
+  background-image: url("../assets/bg-overlay.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -116,11 +116,11 @@ button:hover {
   background-color: #fffefc;
   padding-left: 93px;
   padding-right: 93px;
-  /* width: 1400px; */
   padding-top: 82px;
 }
 
 .discover-section {
+  z-index: 10;
   max-width: 585px;
   max-height: 347px;
 }
@@ -131,10 +131,14 @@ button:hover {
   max-height: 484px;
   height: 100%;
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .discover-img img {
-  width: 500px;
-  height: 484px;
+  width: 680px;
+  height: 476px;
 }
 
 .discover-section h3 {
@@ -154,6 +158,7 @@ button:hover {
 .coffee-types {
   padding-top: 82px;
   padding-left: 93px;
+  padding-right: 93px;
   text-align: center;
   background-color: #fffefc;
   color: #603809;
@@ -174,8 +179,6 @@ button:hover {
 
 .coffee-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
   padding-top: 40px;
 }
@@ -231,4 +234,97 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Filter Section */
+.filter-section {
+  padding-top: 90px;
+  margin-bottom: 16px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 109px;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 2px solid #ffc266;
+  color: #6b4e2e;
+  padding: 10px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #ffe4b5;
+}
+
+.filter-btn.active {
+  background-color: #ffc266;
+  color: #5c3f1d;
+}
+
+/* Menu Section */
+.menu-section {
+  padding-left: 93px;
+  padding-right: 93px;
+}
+.table-wrapper {
+  overflow: hidden;
+  border: 1px solid #f9c06a6b;
+  border-radius: 10px 10px 0 0;
+  height: 580px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th,
+td {
+  padding: 15px 41px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffeed8;
+  color: #6b4e2e;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+td {
+  font-size: 1rem;
+  color: #968162;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Roboto";
+  border-bottom: 1px solid #4428086b;
+}
+
+tr:hover {
+  background-color: #fff0d9;
+}
+
+.item {
+  display: table-row;
+}
+
+.hidden {
+  display: none;
 }
