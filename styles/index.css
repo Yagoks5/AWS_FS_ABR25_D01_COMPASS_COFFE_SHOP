@@ -119,6 +119,7 @@ button:hover {
   align-items: center;
   background-color: #fffefc;
   padding-top: 82px;
+  position: relative; /* Importante para o posicionamento absoluto dos filhos */
 }
 
 .discover-section {
@@ -155,6 +156,20 @@ button:hover {
   font-size: 18px;
   line-height: 1.8;
   padding-bottom: 28px;
+}
+
+.discover-section .bottom-image {
+  position: absolute;
+  bottom: -121px;
+  left: -200px;
+  z-index: 5;
+}
+
+.discover-section .bottom-image img {
+  width: 450px;
+  height: 272px;
+  transform: scaleY(-1);
+  height: auto;
 }
 
 .coffee-types {
