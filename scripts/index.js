@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
       row.classList.add("item");
       row.dataset.type = normalizeType(item.type);
       row.innerHTML = `
-          <td>${item.name}</td>
-          <td>${item.type}</td>
-          <td>R$ ${item.price.toFixed(2)}</td>
-        `;
+                <td>${item.name}</td>
+                <td>${item.type}</td>
+                <td>R$ ${item.price.toFixed(2)}</td>
+            `;
       tableBody.appendChild(row);
     });
   }
@@ -102,6 +102,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+
+  function setupSubscribeForm() {
+    const subscribeForm = document.querySelector(".subscrive-form");
+    const emailInput = subscribeForm.querySelector('input[type="email"]');
+
+    subscribeForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+
+      if (!validateEmail(email)) {
+        alert("Digite um endereço de email válido!!");
+        emailInput.focus();
+        return;
+      }
+
+      alert("Email válido.");
+      emailInput.value = "";
+    });
+  }
+
   function init() {
     fetch(dataUrl)
       .then((response) => response.json())
@@ -111,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
           createFilterButtons(data);
           populateTable(data);
           setupFilterListener(data);
+          setupSubscribeForm();
         } else {
           throw new Error("Dados inválidos");
         }
