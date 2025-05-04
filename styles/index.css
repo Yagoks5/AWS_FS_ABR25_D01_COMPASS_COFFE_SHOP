@@ -514,10 +514,10 @@ tr:hover {
   position: relative;
   background-image: url("../assets/Rectangle\ 14.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: right bottom;
+  background-size: cover;
   margin-left: -93px;
   margin-right: -93px;
-  min-height: 374px;
   background-color: #603809;
   z-index: 0;
 }
@@ -531,7 +531,7 @@ tr:hover {
   bottom: 0;
   background-color: #603809;
   opacity: 0.8;
-  z-index: -1; /* Fica atrás do conteúdo */
+  z-index: -1;
 }
 
 .subscrive-container {
@@ -540,7 +540,6 @@ tr:hover {
   justify-content: space-between;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .subscrive-container h1 {
@@ -553,6 +552,30 @@ tr:hover {
 .subscrive-container p {
   font-size: 20px;
   padding-bottom: 40px;
+}
+
+.subscrive-form {
+  display: flex;
+}
+
+.subscrive-content input {
+  padding: 15px;
+  width: 505px;
+  border: none;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.subscrive-content button {
+  border-radius: 0px;
+  width: 150px;
+  height: auto;
+  font-size: 22px;
+  color: #603809;
+  font-weight: 700;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .subscrive-photo img {
