@@ -153,7 +153,7 @@ button:hover {
 .discover-section p {
   color: #707070;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 34px;
   padding-bottom: 28px;
 }
 
@@ -583,4 +583,111 @@ tr:hover {
   height: 432px;
   position: relative;
   top: -70px;
+}
+
+footer {
+  width: 1336px;
+  height: 492px;
+  background-image: url("../assets/Group\ 63.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-container {
+  height: 492px;
+  background-position: center;
+  display: flex;
+  padding-top: 162px;
+  justify-content: space-between;
+}
+
+.footer-content {
+  height: 258px;
+  width: 380px;
+  padding-left: 93px;
+}
+
+.footer-content h2 {
+  font-family: "Clicker Script";
+  font-size: 54px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.footer-content p {
+  font-family: "Playfair Display";
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  line-height: 22px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 156px;
+}
+
+.social-media a {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.instagram-icon {
+  background-image: url("../assets/instagram-icon.png");
+}
+
+.facebook-icon {
+  background-image: url("../assets/facebook-icon.png");
+}
+
+.youtube-icon {
+  background-image: url("../assets/youtube-icon.svg");
+}
+
+.twitter-icon {
+  background-image: url("../assets/twitter-icon.png");
+}
+
+.about-content {
+  height: 258px;
+  width: 136px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  padding-bottom: 55px;
+}
+
+.company-content {
+  height: 258px;
+  width: 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.company-content h2 {
+  font-size: 26px;
+  padding-bottom: 55px;
+  font-weight: 700;
+}
+
+.company-content p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-content {
+  height: 258px;
+  width: 332px;
+  padding-right: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
