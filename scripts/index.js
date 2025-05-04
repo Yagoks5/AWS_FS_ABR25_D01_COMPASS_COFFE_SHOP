@@ -1,56 +1,125 @@
 document.addEventListener("DOMContentLoaded", () => {
   const coffeeCardsContainer = document.getElementById("coffeeCardsContainer");
+  const filterContainer = document.querySelector(".filter-container");
+  const tableBody = document.querySelector("tbody");
   const defaultImage = "../assets/cappuccino.jpg";
+  const dataUrl = "../data/all-items.json";
 
-  fetch("../data/all-items.json")
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === "success" && data.data) {
-        const newItems = data.data.filter((item) => item.is_new);
-        newItems.forEach((item) => {
-          const card = document.createElement("div");
-          card.classList.add("card");
+  function createCoffeeCard(item) {
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-          const coffeeCard = document.createElement("div");
-          coffeeCard.classList.add("coffee-card");
+    const coffeeCard = document.createElement("div");
+    coffeeCard.classList.add("coffee-card");
 
-          const img = document.createElement("img");
-          img.src = item.imagem_url || defaultImage;
-          img.alt = item.name;
+    const img = document.createElement("img");
+    img.src = item.imagem_url || defaultImage;
+    img.alt = item.name;
+    img.onerror = () => {
+      img.src = defaultImage;
+    };
 
-          img.onerror = () => {
-            img.src = defaultImage;
-          };
+    const h2 = document.createElement("h2");
+    h2.textContent = item.name;
 
-          const h2 = document.createElement("h2");
-          h2.textContent = item.name;
+    const h3 = document.createElement("h3");
+    h3.textContent = item.ingredients_ratio
+      .map((ing) => `${ing.ingredient} ${ing.percentage}%`)
+      .join(" | ");
 
-          const h3 = document.createElement("h3");
-          const ingredientsText = item.ingredients_ratio
-            .map((ing) => `${ing.ingredient} ${ing.percentage}%`)
-            .join(" | ");
-          h3.textContent = ingredientsText;
+    const p = document.createElement("p");
+    p.textContent = `R$${item.price.toFixed(2)}`;
 
-          const p = document.createElement("p");
-          p.textContent = `R$${item.price.toFixed(2)}`;
+    const button = document.createElement("button");
+    button.textContent = "Order Now";
 
-          const button = document.createElement("button");
-          button.textContent = "Order Now";
+    coffeeCard.append(img, h2, h3, p, button);
+    card.appendChild(coffeeCard);
 
-          coffeeCard.appendChild(img);
-          coffeeCard.appendChild(h2);
-          coffeeCard.appendChild(h3);
-          coffeeCard.appendChild(p);
-          coffeeCard.appendChild(button);
+    return card;
+  }
 
-          card.appendChild(coffeeCard);
-
-          coffeeCardsContainer.appendChild(card);
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("Erro na requisição:", error);
-      coffeeCardsContainer.innerHTML = "<p>Erro ao buscar os dados.</p>";
+  function populateNewItems(items) {
+    const newItems = items.filter((item) => item.is_new);
+    newItems.forEach((item) => {
+      const card = createCoffeeCard(item);
+      coffeeCardsContainer.appendChild(card);
     });
+  }
+
+  function populateTable(items) {
+    tableBody.innerHTML = "";
+    items.forEach((item) => {
+      const row = document.createElement("tr");
+      row.classList.add("item");
+      row.dataset.type = normalizeType(item.type);
+      row.innerHTML = `
+          <td>${item.name}</td>
+          <td>${item.type}</td>
+          <td>R$ ${item.price.toFixed(2)}</td>
+        `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  function normalizeType(type) {
+    return type.toLowerCase().replace(/ /g, "-");
+  }
+
+  function createFilterButtons(items) {
+    const uniqueTypes = ["all", ...new Set(items.map((item) => item.type))];
+    uniqueTypes.forEach((type) => {
+      const button = document.createElement("button");
+      button.classList.add("filter-btn");
+      button.dataset.filter = normalizeType(type);
+      button.textContent = type === "all" ? "All items" : type;
+
+      if (type === "all") {
+        button.classList.add("active");
+      }
+
+      filterContainer.appendChild(button);
+    });
+  }
+
+  function setupFilterListener(items) {
+    filterContainer.addEventListener("click", (event) => {
+      if (event.target.classList.contains("filter-btn")) {
+        const filter = event.target.dataset.filter;
+
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        const filteredItems =
+          filter === "all"
+            ? items
+            : items.filter((item) => normalizeType(item.type) === filter);
+
+        populateTable(filteredItems);
+      }
+    });
+  }
+
+  function init() {
+    fetch(dataUrl)
+      .then((response) => response.json())
+      .then(({ status, data }) => {
+        if (status === "success" && data) {
+          populateNewItems(data);
+          createFilterButtons(data);
+          populateTable(data);
+          setupFilterListener(data);
+        } else {
+          throw new Error("Dados inválidos");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao carregar os dados:", error);
+        coffeeCardsContainer.innerHTML = "<p>Erro ao buscar os dados.</p>";
+      });
+  }
+
+  init();
 });
