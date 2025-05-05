@@ -66,7 +66,7 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22); /* baseado no Figma */
+  box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
 }
 
 button:hover {
@@ -465,6 +465,7 @@ td {
   width: 100%;
   flex-grow: 1;
   position: relative;
+  border: 1px solid #f9c06a6b;
 }
 
 .coffee-splash {
