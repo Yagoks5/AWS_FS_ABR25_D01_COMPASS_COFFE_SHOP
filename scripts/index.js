@@ -1,4 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const leftBtn = document.querySelector(".arrow.left");
+  const rightBtn = document.querySelector(".arrow.right");
+  const messageEl = document.querySelector(".message");
+  const nameEl = document.querySelector(".name");
+  const professionEl = document.querySelector(".profession");
+  const photoEl = document.querySelector(".photo");
+
+  let feedbacks = [];
+  let currentIndex = 0;
+
+  fetch("../data/feedbacks 1.json")
+    .then((res) => res.json())
+    .then((data) => {
+      feedbacks = data.data;
+      showFeedback(currentIndex);
+    });
+
+  function showFeedback(index) {
+    const feedback = feedbacks[index];
+    messageEl.textContent = feedback.message;
+    nameEl.textContent = feedback.full_name;
+    professionEl.textContent = feedback.profession;
+    photoEl.src = feedback.image_url;
+  }
+
+  leftBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
+    showFeedback(currentIndex);
+  });
+
+  rightBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % feedbacks.length;
+    showFeedback(currentIndex);
+  });
+
   const coffeeCardsContainer = document.getElementById("coffeeCardsContainer");
   const filterContainer = document.querySelector(".filter-container");
   const tableBody = document.querySelector("tbody");
@@ -54,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
       row.classList.add("item");
       row.dataset.type = normalizeType(item.type);
       row.innerHTML = `
-                <td>${item.name}</td>
-                <td>${item.type}</td>
-                <td>R$ ${item.price.toFixed(2)}</td>
-            `;
+          <td>${item.name}</td>
+          <td>${item.type}</td>
+          <td>R$ ${item.price.toFixed(2)}</td>
+        `;
       tableBody.appendChild(row);
     });
   }

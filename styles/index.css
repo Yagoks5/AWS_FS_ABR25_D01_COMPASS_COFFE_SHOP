@@ -70,7 +70,7 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .secton_1 {
@@ -162,6 +162,12 @@ button:hover {
 .learn-more-btn {
   font-size: 16px;
   font-weight: 700;
+  position: absolute;
+  z-index: 100;
+}
+
+.learn-more-btn:hover {
+  transform: scale(1.1);
 }
 
 .discover-section .bottom-image {
@@ -337,10 +343,6 @@ td {
   font-weight: 400;
   font-family: "Roboto";
   border-bottom: 1px solid #4428086b;
-}
-
-tr:hover {
-  background-color: #fff0d9;
 }
 
 .item {
