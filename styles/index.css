@@ -533,25 +533,35 @@ td {
 }
 
 .arrow {
-  color: #603809;
+  background-color: #f9c06a;
   border: none;
-  padding: 12px 16px;
-  font-size: 20px;
-  border-radius: 16px;
+  border-radius: 20px;
   cursor: pointer;
-  z-index: 10;
   height: 82px;
   width: 82px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
+  z-index: 10;
+  padding: 0;
 }
 
 .arrow.left {
   transform: translateX(50%);
 }
+
 .arrow.right {
   transform: translateX(-50%);
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.flipped {
+  transform: rotate(180deg);
 }
 
 .arrow:hover {
