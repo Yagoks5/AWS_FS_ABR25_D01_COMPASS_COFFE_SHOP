@@ -523,13 +523,13 @@ td {
 }
 
 .feedback-slide img {
-  height: 96px;
-  width: 96px;
+  height: 112px;
+  width: 112px;
   border-radius: 16px;
   object-fit: cover;
   margin-top: 16px;
-  border: 1px solid black;
   transform: translateY(48px);
+  box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
 }
 
 .arrow {
