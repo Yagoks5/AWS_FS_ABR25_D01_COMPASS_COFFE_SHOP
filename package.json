@@ -1,0 +1,23 @@
+{
+  "name": "desafio-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yagoks5/AWS_FS_ABR25_D01_COMPASS_COFFE_SHOP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yagoks5/AWS_FS_ABR25_D01_COMPASS_COFFE_SHOP/issues"
+  },
+  "homepage": "https://github.com/Yagoks5/AWS_FS_ABR25_D01_COMPASS_COFFE_SHOP#readme",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
