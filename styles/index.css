@@ -209,38 +209,53 @@ button:hover {
   gap: 20px;
   padding-top: 40px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* Alterado para centralizar os cards */
 }
 
 .card {
   width: calc(25% - 15px);
-  height: 388px;
-  margin-bottom: 20px;
+  min-width: 250px; /* Largura mínima para evitar cards muito estreitos */
+  margin-bottom: 40px; /* Espaço extra para o botão */
 }
 
 .coffee-card {
   position: relative;
   background-color: #fff9f1;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #f9c06a6b;
+  border: 1px solid #f9c06a6b;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 384px;
+  height: 100%;
+  padding-bottom: 60px; /* Espaço para o botão */
+}
+
+.coffee-card-img-container {
+  width: 100%;
+  height: 222px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .coffee-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 14px;
-  height: 222px;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.coffee-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Restante do CSS dos cards permanece o mesmo */
 .coffee-card h2 {
   font-size: 22px;
-  margin-bottom: 6px;
+  margin: 14px 0 6px;
+  text-align: center;
 }
 
 .coffee-card h3 {
@@ -248,6 +263,7 @@ button:hover {
   margin-bottom: 6px;
   color: #1e1e1e;
   font-weight: 400;
+  text-align: center;
 }
 
 .coffee-card p {
@@ -255,15 +271,14 @@ button:hover {
   margin-bottom: 18px;
   color: #603809;
   font-weight: 700;
+  text-align: center;
 }
 
 .coffee-card button {
+  position: absolute;
+  bottom: -20px;
   font-weight: 700;
-  transform: translateY(50%);
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .filter-section {
@@ -748,4 +763,120 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .discover-img img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .ul-links {
+    padding: 20px 0;
+    gap: 30px;
+  }
+
+  .discover {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .discover-section {
+    margin-bottom: 40px;
+  }
+
+  .discover-img img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .card {
+    width: calc(50% - 15px);
+  }
+
+  .coffee-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coffee-content {
+    margin-bottom: 40px;
+  }
+
+  .subscrive-container {
+    flex-direction: column;
+  }
+
+  .subscrive-photo img {
+    top: 0;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .ul-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .secton_1_content {
+    margin-top: 60px;
+  }
+
+  #coffee {
+    font-size: 150px;
+  }
+
+  .coffee-types-title,
+  .feedback-content h1,
+  .subscrive-container h1 {
+    font-size: 42px;
+  }
+
+  .subscrive-form {
+    flex-direction: column;
+  }
+
+  .subscrive-content input {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .subscrive-content button {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    padding-top: 80px;
+  }
+
+  .footer-content,
+  .about-content,
+  .company-content,
+  .contact-content {
+    width: 50%;
+    margin-bottom: 40px;
+  }
 }
