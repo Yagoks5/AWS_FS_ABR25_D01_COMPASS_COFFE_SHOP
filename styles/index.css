@@ -32,7 +32,6 @@ body {
   align-items: center;
 }
 
-/* w-135px h-46px */
 .bean {
   font-family: "Clicker script";
   height: 46px;
@@ -633,7 +632,7 @@ td {
 }
 
 footer {
-  width: 1336px;
+  width: 100%;
   height: 492px;
   background-image: url("../assets/Group\ 63.png");
   background-repeat: no-repeat;
