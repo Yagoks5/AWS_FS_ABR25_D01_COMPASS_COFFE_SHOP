@@ -39,9 +39,9 @@ coffee-shop/
 ├── data/
 │    ├── all-items.json
 │    └── feedbacks 1.json
-└── assets/
-      ├── all-items.json
-      └── feedbacks 1.json
+└── fonts/
+      ├── ClickerScript-Regular
+      └── PlayfairDisplay-Regular
 ```
 
 ---
@@ -153,8 +153,8 @@ coffee-shop/
 │    ├── all-items.json
 │    └── feedbacks 1.json
 └── assets/
-      ├── all-items.json
-      └── feedbacks 1.json
+      ├── ClickerScript-Regular
+      └── PlayfairDisplay-Regular
 ```
 
 ---
