@@ -5,6 +5,16 @@
   font-family: "Playfair Display";
 }
 
+@font-face {
+  font-family: "Clicker Script";
+  src: url("../fonts/ClickerScript-Regular.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-Regular.ttf") format("woff2");
+}
+
 .container {
   padding-left: 93px;
   padding-right: 93px;
@@ -323,6 +333,7 @@ button:hover {
   border: 1px solid #f9c06a6b;
   border-radius: 10px 10px 0 0;
   height: 580px;
+  overflow-y: auto;
 }
 
 table {

@@ -102,8 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function createFilterButtons(items) {
-    const uniqueTypes = ["all", ...new Set(items.map((item) => item.type))];
-    uniqueTypes.forEach((type) => {
+    const types = ["all"];
+    ("");
+    for (const item of items) {
+      if (!types.includes(item.type)) {
+        types.push(item.type);
+      }
+    }
+
+    types.forEach((type) => {
       const button = document.createElement("button");
       button.classList.add("filter-btn");
       button.dataset.filter = normalizeType(type);
