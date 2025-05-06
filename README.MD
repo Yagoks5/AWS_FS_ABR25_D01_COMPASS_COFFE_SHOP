@@ -51,7 +51,7 @@ coffee-shop/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/bean-scene-coffee-shop.git
+   git clone https://github.com/Yagoks5/AWS_FS_ABR25_D01_COMPASS_COFFE_SHOP
    ```
 
 2. Navigate to the project directory:
@@ -164,7 +164,7 @@ coffee-shop/
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/bean-scene-coffee-shop.git
+   git clone https://github.com/Yagoks5/AWS_FS_ABR25_D01_COMPASS_COFFE_SHOP
    ```
 
 2. Navegue até o diretório do projeto:
