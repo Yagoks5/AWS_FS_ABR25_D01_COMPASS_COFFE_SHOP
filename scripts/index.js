@@ -151,20 +151,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setupSubscribeForm() {
     const subscribeForm = document.querySelector(".subscrive-form");
+    if (!subscribeForm) return;
     const emailInput = subscribeForm.querySelector('input[type="email"]');
+    const messageDiv = document.getElementById("subscribe-message");
+
+    function updateLoginState() {
+      const savedEmail = localStorage.getItem("subscribedEmail");
+      if (savedEmail) {
+        messageDiv.innerHTML = `Logado como <b>${savedEmail}</b>. <button id='logout-btn' style='margin-left:10px;padding:4px 12px;border-radius:5px;border:none;background:#d32f2f;color:#fff;cursor:pointer;'>Sair</button>`;
+        messageDiv.style.color = "#388e3c";
+        emailInput.value = savedEmail;
+        emailInput.disabled = true;
+        subscribeForm.querySelector('button[type="submit"]').disabled = true;
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+          logoutBtn.onclick = function() {
+            localStorage.removeItem("subscribedEmail");
+            messageDiv.textContent = "Você saiu. Email removido.";
+            messageDiv.style.color = "#d32f2f";
+            emailInput.value = "";
+            emailInput.disabled = false;
+            subscribeForm.querySelector('button[type="submit"]').disabled = false;
+          };
+        }
+      } else {
+        messageDiv.textContent = "";
+        emailInput.value = "";
+        emailInput.disabled = false;
+        subscribeForm.querySelector('button[type="submit"]').disabled = false;
+      }
+    }
+
+    updateLoginState();
 
     subscribeForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const email = emailInput.value.trim();
 
       if (!validateEmail(email)) {
-        alert("Digite um endereço de email válido!!");
+        messageDiv.textContent = "Digite um endereço de email válido!!";
+        messageDiv.style.color = "#d32f2f";
         emailInput.focus();
         return;
       }
 
-      alert("Email válido.");
-      emailInput.value = "";
+      const savedEmail = localStorage.getItem("subscribedEmail");
+      if (savedEmail === email) {
+        messageDiv.innerHTML = `Logado como <b>${savedEmail}</b>. <button id='logout-btn' style='margin-left:10px;padding:4px 12px;border-radius:5px;border:none;background:#d32f2f;color:#fff;cursor:pointer;'>Sair</button>`;
+        messageDiv.style.color = "#388e3c";
+        emailInput.disabled = true;
+        subscribeForm.querySelector('button[type="submit"]').disabled = true;
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+          logoutBtn.onclick = function() {
+            localStorage.removeItem("subscribedEmail");
+            messageDiv.textContent = "Você saiu. Email removido.";
+            messageDiv.style.color = "#d32f2f";
+            emailInput.value = "";
+            emailInput.disabled = false;
+            subscribeForm.querySelector('button[type="submit"]').disabled = false;
+          };
+        }
+      } else {
+        localStorage.setItem("subscribedEmail", email);
+        messageDiv.innerHTML = `Logado como <b>${email}</b>. <button id='logout-btn' style='margin-left:10px;padding:4px 12px;border-radius:5px;border:none;background:#d32f2f;color:#fff;cursor:pointer;'>Sair</button>`;
+        messageDiv.style.color = "#388e3c";
+        emailInput.disabled = true;
+        subscribeForm.querySelector('button[type="submit"]').disabled = true;
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+          logoutBtn.onclick = function() {
+            localStorage.removeItem("subscribedEmail");
+            messageDiv.textContent = "Você saiu. Email removido.";
+            messageDiv.style.color = "#d32f2f";
+            emailInput.value = "";
+            emailInput.disabled = false;
+            subscribeForm.querySelector('button[type="submit"]').disabled = false;
+          };
+        }
+      }
     });
   }
 
